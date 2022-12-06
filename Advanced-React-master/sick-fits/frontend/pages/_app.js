@@ -1,3 +1,4 @@
+import Page from "../components/Page"
 const MyApp = ({Component,pageProps}) => {
     return(
         <Page>
