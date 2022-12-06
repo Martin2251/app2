@@ -3,6 +3,7 @@ import {HTML,Head, NextScript, Main} from 'next/document'
 
 export default class MyDocument extends Document{
 render () {
+    return(
     <Html lang='en'>
         {/* <Head></Head> */}
         <body>
@@ -10,5 +11,6 @@ render () {
         <NextScript  />
         </body>
     </Html>
+    )
 }
 }
