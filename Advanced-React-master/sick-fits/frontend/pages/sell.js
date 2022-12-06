@@ -1,8 +1,11 @@
+import Page from "../components/Page"
+
 const SellPage = () => {
     return(
-        <div>
-            <p>Hello</p>
-        </div>
+        <Page>
+            <p>Hello i'm the sell page</p>
+            <p>hey</p>
+        </Page>
     )
 }
-export default 
+export default SellPage

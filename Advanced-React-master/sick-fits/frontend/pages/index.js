@@ -1,8 +1,10 @@
+import Page from "../components/Page"
+
 const Home = () => {
     return(
-        <div>
+        <Page cool="Heck ya!">
             <h1>welcome home!</h1>
-        </div>
+        </Page>
     )
 }
 export default Home
