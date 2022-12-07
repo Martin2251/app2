@@ -1,8 +1,10 @@
 import PropTypes from "react"
+import Header from "./Header";
 
 const Page = ({children, cool}) => {
     return(
         <>
+        <Header/>
         <h2>Im the page component </h2>
         {children}
         {cool}
