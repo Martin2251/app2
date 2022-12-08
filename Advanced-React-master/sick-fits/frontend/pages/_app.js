@@ -1,6 +1,6 @@
 import Page from "../components/Page";
 import NProgress from "nprogress";
-import Router from "next/dist/next-server/server/router";
+import Router from "next/router"
 import "../components/styles/nprogress.css";
 // TODO: SWAP WITH OUR OWN
 import 'nprogress/nprogress.css';

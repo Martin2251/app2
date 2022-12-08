@@ -1,16 +1,26 @@
-import Document, { Html } from 'next/document'
-import {HTML,Head, NextScript, Main} from 'next/document'
+import Document, { Html } from "next/document";
+import { HTML, Head, NextScript, Main } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
-export default class MyDocument extends Document{
-render () {
-    return(
-    <Html lang='en'>
-        <Head/>
+export default class MyDocument extends Document {
+  // needed for stylecomponents
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(
+      (App) => (props) => sheet.collectStyles(<App {...props} />)
+    );
+    const styleTags = sheet.getStyleElement();
+    return {...page,styleTags};
+  }
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
         <body>
-        <Main  />
-        <NextScript  />
+          <Main />
+          <NextScript />
         </body>
-    </Html>
-    )
-}
+      </Html>
+    );
+  }
 }
